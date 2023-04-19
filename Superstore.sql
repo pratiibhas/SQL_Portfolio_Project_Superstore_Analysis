@@ -59,4 +59,5 @@ count(sales) over (order by `Order Date`
 rows between 11 preceding and current row ) as records_count 
 FROM superstore 
 group by 1; 
-/* Since the dataset is sparse this may not be the best approach see Moving_average.png for better explanation*/
+/* Rolling tie windows are used to smooth out the noise in dataset but Depending on the dataset is sparse or not this may or may not be the best approach, since
+too much or too less noise reduction can lead us towards wrong direction */
