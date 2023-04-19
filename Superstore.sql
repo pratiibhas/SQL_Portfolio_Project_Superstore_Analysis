@@ -58,5 +58,5 @@ avg(Sales) over (order by `Order Date`rows between 11 preceding and current row 
 count(sales) over (order by `Order Date`                
 rows between 11 preceding and current row ) as records_count 
 FROM superstore 
-group by 1;
-
+group by 1; 
+/* Since the dataset is sparse this may not be the best approach see Moving_average.png for better explanation*/
